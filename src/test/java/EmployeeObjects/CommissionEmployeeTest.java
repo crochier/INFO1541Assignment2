@@ -15,9 +15,23 @@ class CommissionEmployeeTest {
     }
 
     @Test
-    void increaseSalesOfNegtiveTwoHundredFiftySixPointThirtyFiveShouldMakeSalesTwoHundredFiftySixPointThirtyFive() {
+    void increaseSalesOfNegativeTwoHundredFiftySixPointThirtyFiveShouldMakeSalesTwoHundredFiftySixPointThirtyFive() {
         emp.increaseSales(-256.35);
         double sales = emp.getSales();
         assertEquals(0, sales);
+    }
+
+    @Test
+    void holidayBonusForClintShouldBeZero() {
+        double bonus = emp.holidayBonus();
+        assertEquals(0, bonus);
+    }
+
+    @Test
+    void annualRaiseTwiceForClintShouldGiveRateOfZeroPointZeroThreeZeroFive() {
+        emp.annualRaise();
+        emp.annualRaise();
+        double rate = emp.getRate();
+        assertEquals(0.0305, rate);
     }
 }
