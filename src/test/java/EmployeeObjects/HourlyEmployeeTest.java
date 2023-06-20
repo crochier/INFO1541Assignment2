@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class HourlyEmployeeTest {
-    HourlyEmployee emp = new HourlyEmployee("Tony", "Stark", 5749, "Service", "Lead Service Manager", 32.85);
+    HourlyEmployee emp = new HourlyEmployee("Tony", "Stark", 5749, "Service",
+            "Lead Service Manager", 32.85);
     @Test
     void increaseHoursByPositiveThreePointFiveShouldGiveThreePointFive() {
         emp.increaseHours(3.5);
